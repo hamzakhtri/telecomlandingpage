@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* theme color  */
+
+html {
+    scroll-padding-top: 60px;
+    scroll-behavior: smooth;
+    /* Adjust this value based on your header height */
+}
+
+:root {
+    --primary-color: #70e000;
+    --secondary-color: #000000;
+    --success-color: #4B286D;
+    --bg-gray: #f2f2f2;
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/******************* global component styling *************************** */
+
+.heading-1 {
+    font-size: 47px;
+    font-weight: 800;
+    line-height: 58px;
+}
+
+.heading-2 {
+    font-size: 34px;
+    line-height: 44px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.heading-3 {
+    font-size: 28px;
+    line-height: 38px;
+    font-weight: 800;
+}
+
+.heading-4 {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 800;
+
+}
+
+.primary-text {
+    color: var(--primary-color);
+}
+
+.secondary-text {
+    color: var(--secondary-color);
+}
+
+.theme-light-bg {
+    background-color: var(--bg-gray) !important;
+}
+
+.theme-secondary-bg {
+    background-color: var(--secondary-color) !important;
+}
+
+.theme-primary-bg {
+    background-color: var(--primary-color) !important;
+}
+
+.tagline {
+    font-size: 20px;
+}
+
+.para {
+    font-size: 16px;
+    line-height: 29px;
+}
+
+.lg-para {
+    font-size: 18px;
+    line-height: 32px;
+}
+
+
+.theme-dark-btn {
+    background-color: var(--primary-color);
+    text-decoration: none;
+    box-shadow: 2px 3px 4px #000000ad;
+    padding: 7px 17px;
+    color: #000000;
+    font-size: 18px;
+    position: relative;
+    border-radius: 5px;
+    font-weight: 600;
+    overflow: hidden;
+    text-align: center;
+    transition: background-color 0.4s ease, color 0.4s ease;
+    display: inline-block;
+}
+
+.theme-dark-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            rgba(255, 255, 255, 0.4),
+            rgba(255, 255, 255, 0));
+    transition: all 1.2s ease;
+}
+
+.theme-dark-btn:hover::before {
+    left: 100%;
+}
+
+.theme-dark-btn:hover {
+    background-color: var(--primary-color);
+}
+
+
+.theme-light-btn {
+    border-radius: 50px;
+    background-color: var(--bg-gray);
+    text-decoration: none;
+    padding: 7px 17px;
+    color: var(--primary-color);
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.4s ease, color 0.4s ease;
+    font-weight: 500;
+}
+
+.section {
+    padding: 60px 0px;
+}
+
+button,
+a {
+    cursor: pointer !important;
+}
+
+.theme-check-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.theme-check-list li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    font-size: 18px;
+}
+
+.theme-check-list li::before {
+    content: "\F270";
+    font-family: "bootstrap-icons";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.corner-effect {
+    position: relative;
+    z-index: 1;
+}
+
+.corner-effect::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    background-color: var(--secondary-color);
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+    z-index: -1;
+}
+
+.corner-effect::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    background-color: var(--secondary-color);
+    clip-path: polygon(0 100%, 0 0, 100% 100%);
+    z-index: -1;
+}
+
+.styled-img {
+    border-radius: 20px;
+    box-shadow: 1px 2px 2px #000;
+}
+
+
+
+/* ************************** Hero Section Styling ************************* */
+
+.hero-content h1 {
+    font-size: 38px;
+    line-height: 49px;
+    font-weight: 600;
+}
+
+.hero-content h1 .secondary-text {
+    display: block;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 80px;
+}
+
+.hero-content h2 {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 38px;
+    margin-top: 19px;
+}
+
+section.hero-section {
+    /* padding: 80px 0; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image:
+        linear-gradient(to right, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0) 100%),
+        url("../images/hero-img.webp");
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* ************************** Why Choose styling ******************************** */
+
+
+section.why-choose li strong {
+    color: #000000;
+    font-weight: 600;
+}
+
+section.why-choose ul.theme-check-list li::before {
+    font-size: 47px;
+    top: -11px;
+}
+
+section.why-choose ul.theme-check-list li:nth-child(1)::before {
+    content: "\F4E6";
+}
+
+section.why-choose ul.theme-check-list li:nth-child(2)::before {
+    content: "\F245";
+}
+
+section.why-choose ul.theme-check-list li:nth-child(3)::before {
+    content: "\F3C2";
+}
+
+
+section.why-choose ul.theme-check-list li {
+    margin-bottom: 20px;
+    padding-left: 62px;
+}
+
+/* ********************* system info sec *************************  */
+
+.info-card {
+    padding: 25px;
+    background: var(--secondary-color);
+    height: 100%;
+    border-radius: 20px;
+    color: var(--ilght-text);
+    border: 3px solid var(--primary-color);
+    cursor: pointer;
+
+}
+
+.info-card p {
+    font-weight: 300 !important;
+    margin-top: 15px;
+    color: #fff;
+}
+
+.info-card .info-icon {
+    display: inline-block;
+    padding: 7px;
+    line-height: 0;
+    background: var(--primary-color);
+    width: 68px;
+    height: 68px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid var(--secondary-color);
+    margin-top: -50px;
+
+}
+
+.info-card:hover {
+    background-color: var(--primary-color);
+}
+
+.info-card:hover .info-icon {
+    background-color: var(--secondary-color);
+    border-color: var(--primary-color);
+}
+
+.info-icon i {
+    font-size: 40px !important;
+    color: white;
+}
+
+.info-card .heading-4 {
+    font-size: 22px;
+    margin-top: 30px;
+    font-weight: 600;
+}
+
+
+@media only screen and (max-width: 375px) {}
