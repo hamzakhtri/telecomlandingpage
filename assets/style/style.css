@@ -325,5 +325,531 @@ section.why-choose ul.theme-check-list li {
     font-weight: 600;
 }
 
+/* ************* Steps Section Styling ****************** */
 
-@media only screen and (max-width: 375px) {}
+section.why-choose.steps-sec ul.theme-check-list li {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+section.why-choose.steps-sec ul.theme-check-list li::before {
+    font-family: "Poppins", sans-serif;
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--secondary);
+    font-size: 35px;
+    top: 2px;
+    border: 3px solid;
+    box-shadow: 2px 4px 4px #00000017;
+}
+
+section.why-choose.steps-sec ul.theme-check-list li:nth-child(1)::before {
+    content: "1";
+}
+
+section.why-choose.steps-sec ul.theme-check-list li:nth-child(2)::before {
+    content: "2";
+    font-family: "Poppins", sans-serif;
+
+}
+
+section.why-choose.steps-sec ul.theme-check-list li:nth-child(3)::before {
+    content: "3";
+    font-family: "Poppins", sans-serif;
+
+}
+
+/************************* testimonial section  ******************************/
+
+.new-testi-sec {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url("../images/testi-bg.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.review-img img {
+    width: 100px;
+    border-radius: 100%;
+    padding: 4px;
+    border: 2px solid var(--primary-color);
+    background: transparent;
+    margin-bottom: 10px;
+}
+
+.review-content h4 {
+    font-size: 20px;
+    margin-bottom: 9px;
+    color: var(--primary-color);
+}
+
+.review-content p {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 30px;
+    color: #f2f2f2;
+}
+
+/* ************************ Testi Monial Section ******************** */
+
+.accordion {
+    border-bottom: 1px solid var(--lightgray);
+}
+
+.accordion .accordion-item {
+    border: none;
+    border-bottom: 2px solid var(--secondary-color);
+    padding: 0px 10px;
+    background: transparent;
+    padding-right: 19px;
+}
+
+
+.accordion button {
+    position: relative;
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding-right: 36px !important;
+    padding: 1em 0;
+    color: var(--secondary-color);
+    font-size: 1.15rem;
+    font-weight: 500;
+    border: none;
+    background: none;
+    outline: none;
+    transition: color 0.3s;
+}
+
+.accordion button:hover,
+.accordion button:focus {
+    cursor: pointer;
+    color: black;
+}
+
+.accordion button:hover::after,
+.accordion button:focus::after {
+    cursor: pointer;
+    color: var(--blue);
+    border: 1px solid var(--blue);
+}
+
+.accordion .accordion-title {
+    padding: 1em 1.5em 1em 0;
+}
+
+.accordion .icon {
+    display: inline-block;
+    position: absolute;
+    top: 18px;
+    right: 0;
+    width: 22px;
+    height: 22px;
+    border: 1px solid;
+    border-radius: 16px;
+}
+
+.accordion .icon::before {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 9px;
+    left: 5px;
+    width: 10px;
+    height: 2px;
+    background: currentColor;
+}
+
+.accordion .icon::after {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: 9px;
+    width: 2px;
+    height: 10px;
+    background: currentColor;
+}
+
+.accordion button[aria-expanded="true"] {
+    color: var(--primary-color);
+}
+
+.accordion button[aria-expanded="true"] .icon::after {
+    width: 0;
+}
+
+.accordion button[aria-expanded="true"]+.accordion-content {
+    opacity: 1;
+    max-height: 9em;
+    transition: all 200ms linear;
+    will-change: opacity, max-height;
+}
+
+.accordion .accordion-content {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 200ms linear, max-height 200ms linear;
+    will-change: opacity, max-height;
+}
+
+.accordion .accordion-content p {
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 0.5em 0 1.5em 0;
+    color: black;
+}
+
+/* ***************** Contact Styling ********************/
+
+.contact-page-sec .contact-info {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    height: 100%;
+}
+
+.contact-page-sec .contact-info-icon {
+    margin-bottom: 15px;
+}
+
+.contact-page-sec .contact-info-item {
+    background: var(--secondary-color);
+    padding: 30px 10px;
+    height: 100% !important;
+    border-radius: 20px;
+    border: 4px solid var(--primary-color);
+}
+
+.contact-page-sec .contact-page-form .col-md-6.col-sm-6.col-xs-12 {
+    padding-left: 0px;
+}
+
+.contact-page-sec .contact-page-form.contact-form input {
+    margin-bottom: 5px;
+}
+
+.contact-page-sec .contact-page-form.contact-form textarea {
+    height: 110px;
+}
+
+.contact-page-sec .contact-page-form.contact-form input[type="submit"] {
+    background: rgb(7, 28, 52);
+    width: 150px;
+    border-color: rgb(7, 28, 52);
+}
+
+.contact-page-sec .contact-info-icon i {
+    font-size: 48px;
+    color: rgb(112 224 0);
+}
+
+.contact-page-sec .contact-info-text p {
+    margin-bottom: 0px;
+}
+
+.contact-page-sec .contact-info-text h2 {
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.contact-page-sec .contact-info-text span {
+    color: rgb(229, 229, 229);
+    font-size: 16px;
+    display: inline-block;
+    width: 100%;
+}
+
+.contact-page-sec .contact-page-form input {
+    background: none 0px 0px repeat scroll rgb(249, 249, 249);
+    border: 1px solid rgb(249, 249, 249);
+    margin-bottom: 20px;
+    padding: 12px 16px;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.contact-page-sec .contact-page-form .message-input {
+    display: inline-block;
+    width: 100%;
+    padding-left: 0px;
+}
+
+.contact-page-sec .single-input-field textarea {
+    background: none 0px 0px repeat scroll rgb(249, 249, 249);
+    border: 1px solid rgb(249, 249, 249);
+    width: 100%;
+    height: 163px;
+    padding: 12px 16px;
+    border-radius: 4px;
+}
+
+.contact-page-sec .single-input-field h4 {
+    color: rgb(70, 70, 70);
+    text-transform: capitalize;
+    font-size: 14px;
+}
+
+.contact-page-sec .contact-page-form {
+    display: inline-block;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.contact-page-sec .contact-page-map {
+    margin-top: 36px;
+}
+
+.contact-page-sec .contact-page-form form {
+    padding: 20px 15px 0px;
+}
+
+
+/********************* final cta section ********************** */
+
+section.section.final-cta {
+    border: 8px dashed var(--primary-color);
+}
+
+/* ************************* Phone and Whatsapp widget ***********************/
+
+
+.phone-widget {
+    z-index: 99999999;
+    position: fixed;
+    bottom: 18px;
+    left: 26px;
+}
+
+.phone-widget div {
+    width: 60px;
+    height: 60px;
+    background: #000000;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    font-size: 29px;
+    box-shadow: 1px 3px 6px #0000004d;
+    border: 2px solid var(--primary-color);
+    transition: 0.4s;
+}
+
+.phone-widget div:hover {
+    opacity: 0.9;
+}
+
+.phone-widget div i {
+    color: var(--primary-color);
+}
+
+.whatsapp-widget {
+    z-index: 99999999;
+    position: fixed;
+    bottom: 18px;
+    right: 26px;
+    cursor: pointer !important;
+}
+
+.whatsapp-widget div {
+    width: 60px;
+    height: 60px;
+    background: #42BF50;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    font-size: 29px;
+    box-shadow: 1px 3px 6px #0000004d;
+    border: 2px solid #42BF50;
+    transition: 0.4s;
+    cursor: pointer !important;
+
+}
+
+.whatsapp-widget div:hover {
+    opacity: 0.9;
+    cursor: pointer !important;
+}
+
+.whatsapp-widget div i {
+    color: #fff;
+    cursor: pointer !important;
+}
+
+/* ******************* Footer Section ****************************/
+
+
+.footer-section img {
+    max-width: 100%;
+    height: auto;
+    width: 180px;
+}
+
+.footer-section {
+    background-color: var(--secondary-color);
+    position: relative;
+    overflow: hidden;
+    z-index: 9;
+}
+
+.footer-section .footer-top {
+    padding-top: 60px;
+    padding-bottom: 25px;
+}
+
+
+.footer-top .site-logo {
+    margin-bottom: 25px;
+    display: block;
+    max-width: 200px;
+}
+
+
+.footer-section .sm-icons {
+    flex-direction: row;
+}
+
+.footer-section .sm-icons .nav-link {
+    padding-right: 1em;
+}
+
+.footer-section .copy-right-text {
+    color: rgb(255, 255, 255);
+}
+
+.footer-section .copy-right-text a {
+    color: var(--white-font);
+}
+
+.footer-section ul.navbar-nav.sm-icons i {
+    font-size: 30px;
+    color: var(--primary-color) !important;
+}
+
+.footer-bottom {
+    padding: 6px;
+    border-top: 1px solid #d3d3d329;
+}
+
+@media only screen and (max-width: 1024px) {
+    .hero-content h1 .secondary-text {
+        font-size: 50px;
+        line-height: 70px;
+    }
+
+    .hero-content h1 {
+        font-size: 33px;
+        line-height: 44px;
+    }
+
+    .tagline {
+        font-size: 18px;
+    }
+
+    .hero-content h1 .secondary-text {
+        font-size: 42px;
+        line-height: 62px;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .heading-2 {
+        font-size: 28px;
+        line-height: 38px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    section.hero-section {
+        min-height: auto !important;
+    }
+
+    section.hero-section {
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0.4) 100%), url(../images/hero-img.webp);
+    }
+
+    .theme-check-list li {
+        font-size: 16px !important;
+    }
+
+    section.contact-page-sec.section .col-md-4 {
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width: 690px) {
+    .section {
+        padding: 40px 0px;
+    }
+
+    .accordion button:hover,
+    .accordion button:focus {
+        padding-right: 30px;
+    }
+
+    .heading-3 {
+        font-size: 22px;
+        line-height: 32px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .hero-content h1 .secondary-text {
+        font-size: 36px;
+        line-height: 58px;
+    }
+
+    .heading-2 {
+        font-size: 24px;
+        line-height: 34px;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .hero-content h1 .secondary-text {
+        font-size: 31px;
+        line-height: 52px;
+    }
+
+    .hero-content h1 {
+        font-size: 27px;
+        line-height: 36px;
+    }
+
+}
+
+@media only screen and (max-width: 375px) {
+    .hero-content h1 .secondary-text {
+        font-size: 28px;
+        line-height: 49px;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+        line-height: 33px;
+    }
+
+    .heading-2 {
+        font-size: 21px;
+        line-height: 30px;
+    }
+}
